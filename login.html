@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giao diện nhập xuất nâng cao</title>
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-1">
+            <div class="col-sm-6 m-auto">
+                <form>
+                    <div class="form-group">
+                        <div class="p-2">
+                            <img src="assets/images/logo.jpg" class="square-200 img-fit rounded-circle m-auto d-block">
+                        </div>
+                        <h4 class="text-info mt-3">Đăng nhập hệ thống</h4>
+                        <div class="text-style-2">
+                            <input id="username" type="text" placeholder="admin" autocomplete="off" autofocus />
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="text-style-2">
+                            <input id="password" type="password" placeholder="abc@123" />
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="button-style">
+                            <button class="w-100">Đăng nhập</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/jquery-3.5.1/jquery-3.5.1.js"></script>
+
+    <script>
+        $("input").focus(function(ev){
+            $(ev.currentTarget.parentElement).css({
+                "margin-top":"56px"
+            });
+        });
+
+        $("input").blur(function(ev){
+            $(ev.currentTarget.parentElement).css({
+                "margin-top":""
+            });
+        });
+    </script>
+</body>
+
+</html>
