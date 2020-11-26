@@ -44,6 +44,11 @@
 	<script>
 		$(document).ready(function () {
 			$("#username").focus();
+			var isLogged = sessionStorage.getItem("isLogged") == 'true';
+			if (isLogged == true) {
+				console.log(isLogged);
+				location.href = "index.html";
+			}
 		});
 		
 		$("input").focus(function (ev) {
